@@ -80,7 +80,7 @@ static void upsert_device(std::vector<BacklightDevice> &devices, udev_device *de
   check_nn(name);
 
   const char *actual_brightness_attr =
-      strncmp(name, "amdgpu_bl", 9) == 0 || strcmp(name, "apple-panel-bl") == 0
+      strcmp(name, "apple-panel-bl") == 0
           ? "brightness"
           : "actual_brightness";
 
